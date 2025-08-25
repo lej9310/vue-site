@@ -4,21 +4,19 @@ import Ex1 from './components/day2_0825/w3-proj/src/components/D1_bind.vue';
 import Ex2 from './components/day2_0825/w3-proj/src/components/D2_if.vue';
 import Ex3 from './components/day2_0825/w3-proj/src/components/D3_show.vue';
 import Ex4 from './components/day2_0825/w3-proj/src/components/D4_for.vue';
+import Ex5 from './components/day2_0825/w3-proj/src/components/D5_events.vue';
 
-const pages = { Ex1, Ex2, Ex3, Ex4 }
+const pages = { Ex1, Ex2, Ex3, Ex4, Ex5 }
 const activeComp = ref("Ex1")
 </script>
 
 <template>
   <!-- day2_0825 -->
-  <!-- <Ex1 />
-  <Ex2 />
-  <Ex3 />
-  <Ex4 /> -->
   <button @click="activeComp = 'Ex1'">v-bind</button>
   <button @click="activeComp = 'Ex2'">v-if</button>
   <button @click="activeComp = 'Ex3'">v-show</button>
   <button @click="activeComp = 'Ex4'">v-for</button>
+  <button @click="activeComp = 'Ex5'">Events</button>
 
   <div id="comp_view">
     <KeepAlive>
