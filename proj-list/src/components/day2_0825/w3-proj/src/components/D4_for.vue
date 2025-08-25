@@ -12,10 +12,11 @@
     </div>
     <hr>
 
-    <div>
-        <figure v-for="x in FoodList3">
-            <img v-bind:src="x.url">
-            <figcaption>{{x.name}}</figcaption>
+    <p>이미지와 설명(캡션)</p>
+    <div class="menu">
+        <figure v-for="x in FoodList3" :key="x.name">
+            <img :src="x.url" alt="Food List 3">
+            <figcaption>{{ x.name }}</figcaption>
         </figure>
     </div>
     <hr>
@@ -23,7 +24,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import img_burrito from '../assets/img_pizza.svg'
+import img_burrito from '../assets/img_burrito.svg'
 import img_salad from '../assets/img_salad.svg'
 import img_cake from '../assets/img_cake.svg'
 import img_soup from '../assets/img_soup.svg'
@@ -51,7 +52,13 @@ const FoodList2 = ref([
 ])
 
 const FoodList3 = ref([
-    {name: img_burrito, url:'img_burrito'}   
+    { name: 'burrito', url: img_burrito },
+    { name: 'salad', url: img_salad },
+    { name: 'cake', url: img_cake },
+    { name: 'soup', url: img_soup },
+    { name: 'fish', url: img_fish },
+    { name: 'pizza', url: img_pizza },
+    { name: 'rice', url: img_rice }
 ])
 
 </script>
@@ -72,5 +79,24 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+figure img {
+  display: inline-block;
+  max-width: 50%;
+  height: auto;
+}
+
+figure {
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightskyblue;
+    border-radius: 5px;
+    text-align: center;
+}
+
+figcaption {
+    text-align: center;
 }
 </style>
