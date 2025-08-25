@@ -34,6 +34,7 @@ button {
 }
 
 #comp_view {
+  width: 100%;
   margin-top: 20px;
   border: 1px solid black;
   border-radius: 10px;
