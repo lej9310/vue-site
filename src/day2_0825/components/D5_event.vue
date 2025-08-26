@@ -1,7 +1,16 @@
 <template>
+    <!-- event -->
+    <div class="moose">
+        <img src="../assets/img_moose.jpg" alt="">
+        <p>Moose count: {{ count }}</p>
+        <button type="button" @click="count++">Count moose</button>
+
+    </div>
+    <hr>
+
     <div>
         <p>{{ cnt }}</p>
-        <button v-on:click="cnt++">++씩 증가 버튼</button>        
+        <button v-on:click="cnt++">++씩 증가 버튼</button>
     </div>
     <hr>
 
@@ -24,15 +33,6 @@
     <div class="bg" @mousemove="colorVal = Math.floor(Math.random() * 360)"
         :style="{ backgroundColor: `hsl(${colorVal}, 60%, 60%)` }">
         색상값 : {{ colorVal }}
-    </div>
-    <hr>
-
-    <!--  -->
-    <div class="moose">
-        <img src="../assets/img_moose.jpg" alt="">
-        <p>Moose count: {{ count }}</p>
-        <button type="button" @click="count++">Count moose</button>
-
     </div>
     <hr>
 

@@ -1,6 +1,7 @@
 <!-- vbase-3-setup -->
 <template>
-    <div>
+    <p>[메뉴 목록]</p>
+    <div class="menu bg">
         <ol>
             <li v-for="x in FoodList">{{ x }}</li>
         </ol>
@@ -64,6 +65,12 @@ const FoodList3 = ref([
 </script>
 
 <style scoped>
+p {
+    background-color: aquamarine;
+    margin: 15px;
+    padding: 5px;
+}
+
 img {
     width: 100px;
     height: 50px;
@@ -74,17 +81,21 @@ img {
 .menu {
     border: dashed greenyellow 1px;
     width: 90%;
-    margin: 20px;
+    margin: 10px auto;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
+.bg {
+    background-color: rgba(0, 255, 255, 0.203);
+}
+
 figure img {
-  display: inline-block;
-  max-width: 50%;
-  height: auto;
+    display: inline-block;
+    max-width: 50%;
+    height: auto;
 }
 
 figure {

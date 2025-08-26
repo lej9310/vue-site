@@ -5,9 +5,10 @@ import Ex2 from './day2_0825/components/D2_if.vue';
 import Ex3 from './day2_0825/components/D3_show.vue';
 import Ex4 from './day2_0825/components/D4_for.vue';
 import Ex5 from './day2_0825/components/D5_event.vue';
+import Ex6 from './day2_0825/components/D6_methods.vue';
 
-const pages = { Ex1, Ex2, Ex3, Ex4, Ex5}
-const activeComp = ref("Ex1")
+const pages = { Ex1, Ex2, Ex3, Ex4, Ex5, Ex6}
+const activeComp = ref("Ex6")
 </script>
 
 <template>
@@ -16,7 +17,8 @@ const activeComp = ref("Ex1")
   <button @click="activeComp = 'Ex2'">v-if</button>
   <button @click="activeComp = 'Ex3'">v-show</button>
   <button @click="activeComp = 'Ex4'">v-for</button>
-  <button @click="activeComp = 'Ex5'">Events</button>
+  <button @click="activeComp = 'Ex5'">Events/v-on</button>
+  <button @click="activeComp = 'Ex6'">methods</button>
 
   <div id="comp_view">
     <KeepAlive>
