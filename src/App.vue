@@ -1,10 +1,10 @@
 <script setup>
 import { ref } from 'vue';
-import Ex1 from './day2_0825/src/components/D1_bind.vue';
-import Ex2 from './day2_0825/src/components/D2_if.vue';
-import Ex3 from './day2_0825/src/components/D3_show.vue';
-import Ex4 from './day2_0825/src/components/D4_for.vue';
-import Ex5 from './day2_0825/src/components/D5_events.vue';
+import Ex1 from './day2_0825/components/D1_bind.vue';
+import Ex2 from './day2_0825/components/D2_if.vue';
+import Ex3 from './day2_0825/components/D3_show.vue';
+import Ex4 from './day2_0825/components/D4_for.vue';
+import Ex5 from './day2_0825/components/D5_event.vue';
 
 const pages = { Ex1, Ex2, Ex3, Ex4, Ex5 }
 const activeComp = ref("Ex1")
