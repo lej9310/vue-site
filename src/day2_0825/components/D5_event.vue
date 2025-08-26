@@ -1,9 +1,9 @@
 <template>
     <div>
         <p>{{ cnt }}</p>
-        <button v-on:click="cnt++">++씩 증가 버튼</button>
-        <hr>
+        <button v-on:click="cnt++">++씩 증가 버튼</button>        
     </div>
+    <hr>
 
     <!-- 전구불 -->
     <div>
@@ -27,24 +27,25 @@
     </div>
     <hr>
 
+    <!--  -->
+    <div class="moose">
+        <img src="../assets/img_moose.jpg" alt="">
+        <p>Moose count: {{ count }}</p>
+        <button type="button" @click="count++">Count moose</button>
+
+    </div>
+    <hr>
+
     <!-- 메뉴판 -->
     <div class="menu2">
         <img :src="imgUrl" alt="test">
         <ol>
             <li v-for="food in FoodList" @click="imgUrl = food.src">
                 {{ food.name }}
-            </li>             
-        </ol>       
+            </li>
+        </ol>
     </div>
     <hr>
-
-    <p>이미지와 설명(캡션)</p>
-    <div class="menu">        
-        <figure v-for="food in FoodList" :key="food.name">
-            <img :src="food.url" alt="Food List">
-            <figcaption>{{ food.name }}</figcaption>
-        </figure>
-    </div>
 
 </template>
 
@@ -66,6 +67,7 @@ const cnt = ref(0)
 const lightOn = ref(false)
 const inpCount = ref(0)
 const colorVal = ref(50)
+const count = ref(0)
 const imgUrl = ref(img_burrito)
 
 const FoodList = ref([
@@ -81,6 +83,20 @@ const FoodList = ref([
 </script>
 
 <style scoped>
+p {
+    background-color: rgba(244, 159, 159, 0.759);
+    color: darkred;
+    font-weight: bold;
+    line-height: 1.5
+}
+
+div {
+    border: dashed greenyellow 1px;
+    width: 90%;
+    padding: 20px;
+    margin: 10px auto;
+}
+
 img {
     display: inline-block;
     width: 100px;
@@ -97,20 +113,22 @@ img {
     align-items: center;
 }
 
-
-.menu {
-    border: dashed greenyellow 1px;
+.moose>img {
     width: 90%;
-    margin: 20px;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+}
+
+button {
+    background-color: yellowgreen;
+    border: solid green 1px;
+    border-radius: 10ch;
+    box-shadow: 1px;
+    margin-bottom: 30px;
+    font-weight: bold;
 }
 
 .menu2>img {
     float: right;
-    width: 20%;
+    width: 30%;
 }
 
 .menu2 li:hover {
