@@ -28,18 +28,18 @@
     <hr>
 
     <!-- 메뉴판 -->
-    <div class="menu">
+    <div class="menu2">
+        <img :src="imgUrl" alt="test">
         <ol>
             <li v-for="food in FoodList" @click="imgUrl = food.src">
                 {{ food.name }}
-            </li>
-        </ol>
-        <img :src="imgUrl" alt="test">
+            </li>             
+        </ol>       
     </div>
     <hr>
 
     <p>이미지와 설명(캡션)</p>
-    <div class="menu">
+    <div class="menu">        
         <figure v-for="food in FoodList" :key="food.name">
             <img :src="food.url" alt="Food List">
             <figcaption>{{ food.name }}</figcaption>
@@ -106,5 +106,16 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.menu2>img {
+    float: right;
+    width: 20%;
+}
+
+.menu2 li:hover {
+    border: dashed black 1px;
+    cursor: pointer;
+    background-color: rgb(224, 224, 224);
 }
 </style>

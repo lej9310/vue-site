@@ -7,15 +7,15 @@ import Ex4 from './day2_0825/components/D4_for.vue';
 import Ex5 from './day2_0825/components/D5_event.vue';
 
 const pages = { Ex1, Ex2, Ex3, Ex4, Ex5 }
-const activeComp = ref("Ex1")
+const activeComp = ref("Ex5")
 </script>
 
 <template>
   <!-- day2_0825 -->
-  <button @click="activeComp = 'Ex1'">v-bind</button>
+  <!-- <button @click="activeComp = 'Ex1'">v-bind</button>
   <button @click="activeComp = 'Ex2'">v-if</button>
   <button @click="activeComp = 'Ex3'">v-show</button>
-  <button @click="activeComp = 'Ex4'">v-for</button>
+  <button @click="activeComp = 'Ex4'">v-for</button> -->
   <button @click="activeComp = 'Ex5'">Events</button>
 
   <div id="comp_view">
