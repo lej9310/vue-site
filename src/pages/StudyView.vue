@@ -100,7 +100,10 @@ button {
 .comp-btn {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+}
+
+.comp-btn>button {
+  gap: 50px;
   background-color: lightpink;
   border: 1px solid darkred;
 }

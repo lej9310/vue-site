@@ -2,15 +2,13 @@
     <div>
         <button @click="gotoPages('a1')">A1 웹디자인기능사</button>
         <button @click="gotoPages('b1')">B1 웹디자인기능사</button>
+      <router-view />
     </div>
 </template>
 
 <script setup>
-import { useRoute, useRouter } from 'vue-router';
-
-
+import { useRouter } from 'vue-router';
 const $router = useRouter()
-const route = useRoute()
 
 const gotoPages = (id) => {
     $router.push({ path: `/wd/${id}` })

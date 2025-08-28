@@ -9,17 +9,17 @@ import Ex_B1 from './pages/Ex_B1.vue'
 const routes = [
     { path: '/', component: HomeView },
     { path: '/about', component: AboutView },
-    { path: '/study/', component: StudyView },
+    { path: '/study', component: StudyView },
     {
         path: '/wd/',
         component: Ex_webDesign,
         children: [
             {
-                path: '/wd/a1',
+                path: 'a1',
                 component: Ex_A1,
             },
             {
-                path: '/wd/b1',
+                path: 'b1',
                 component: Ex_B1,
             },
         ],
