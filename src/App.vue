@@ -1,42 +1,51 @@
 <script setup>
-import { ref } from 'vue';
-import Ex1 from './day2_0825/components/D1_bind.vue';
-import Ex2 from './day2_0825/components/D2_if.vue';
-import Ex3 from './day2_0825/components/D3_show.vue';
-import Ex4 from './day2_0825/components/D4_for.vue';
-import Ex5 from './day2_0825/components/D5_event.vue';
-import Ex6 from './day2_0825/components/D6_methods.vue';
+import router from './router';
 
-const pages = { Ex1, Ex2, Ex3, Ex4, Ex5, Ex6}
-const activeComp = ref("Ex6")
 </script>
 
 <template>
-  <!-- day2_0825 -->
-  <button @click="activeComp = 'Ex1'">v-bind</button>
-  <button @click="activeComp = 'Ex2'">v-if</button>
-  <button @click="activeComp = 'Ex3'">v-show</button>
-  <button @click="activeComp = 'Ex4'">v-for</button>
-  <button @click="activeComp = 'Ex5'">Events/v-on</button>
-  <button @click="activeComp = 'Ex6'">methods</button>
+  <p>경로: {{ $route.fullPath }}</p>
 
-  <div id="comp_view">
-    <KeepAlive>
-      <component :is="pages[activeComp]"></component>
-    </KeepAlive>
-  </div>
+  <nav>
+    <ul>
+      <RouterLink to="/">
+        <li>Home</li>
+      </RouterLink>
+      <RouterLink to="/about">
+        <li>About</li>
+      </RouterLink>
+      <RouterLink to="/study">
+        <li>Study</li>
+      </RouterLink>
+      <RouterLink to="/wd">
+        <li>WebDesign</li>
+      </RouterLink>
+    </ul>
+  </nav>
+
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <style scoped>
-button {
-  margin: 5px;
-  filter: drop-shadow(0 0 1.5px grey);
+li {
+  display: inline-block;
+  width: 120px;
+  list-style: none;
+  font-weight: bold;  
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 5px 2px 2px 2px gray;
+  color: black;
 }
 
-#comp_view {
-  width: 100%;
-  margin-top: 20px;
-  border: 1px solid black;
-  border-radius: 10px;
+li:hover {
+  color: rgb(200, 0, 0);
+  background-color: rgb(0, 94, 217);
+  color: white;
 }
 </style>

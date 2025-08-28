@@ -11,7 +11,7 @@
 
     <h4>Passing Arguments</h4>
     <div class="bg">
-        <img src="../assets/img_moose.jpg" alt="img_moose">
+        <img src="./assets/img_moose.jpg" alt="img_moose">
         <p>{{ "Moose count: " + count }}</p>
         <button @click="addCount(1)">+1 증가</button>
         <button @click="addCount(5)">+5 증가</button>
@@ -68,7 +68,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import tiger from "../assets/img_tiger.jpeg";
+import tiger from "./assets/img_tiger.jpeg";
 
 const text = ref('')
 const changeText = () => {

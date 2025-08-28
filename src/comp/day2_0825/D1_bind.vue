@@ -1,17 +1,3 @@
-<script setup>
-import { ref } from "vue";
-import img_beach3 from "../assets/img_beach3.jpg"
-
-// 안 뜨면 import 했는지 확인하자
-const size = ref("20px")
-const size2 = ref("30")
-const size3 = ref("40")
-const bgVal = ref("180")
-const fontCol = ref("white")
-const isImportant = ref(true)
-const className = ref("impClass")
-</script>
-
 <template>
     <!-- 이미지 import -->
     <img v-bind:src="img_beach3" alt="img_beach3">
@@ -51,6 +37,20 @@ const className = ref("impClass")
         클래스 Important 속성 여부
     </div>
 </template>
+
+<script setup>
+import { ref } from "vue";
+import img_beach3 from "./assets/img_beach3.jpg"
+
+// 안 뜨면 import 했는지 확인하자
+const size = ref("20px")
+const size2 = ref("30")
+const size3 = ref("40")
+const bgVal = ref("180")
+const fontCol = ref("white")
+const isImportant = ref(true)
+const className = ref("impClass")
+</script>
 
 <style scoped>
 .myClass {

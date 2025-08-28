@@ -5,7 +5,7 @@
             <h2>
                 {{ item.foodName }}
                 <!-- v-show: item 변수의 IsFavorite이 True 인 것에만 img 보여주기-->
-                <img src="../assets/img_quality.svg" v-show="item.IsFavorite" alt="img_quality">
+                <img src="./assets/img_quality.svg" v-show="item.IsFavorite" alt="img_quality">
             </h2>
             <p>{{ item.foodDesc }}</p>
             <button @click="toggleFavorite(index)">Favorite</button>

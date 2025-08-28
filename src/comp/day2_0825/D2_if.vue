@@ -19,7 +19,7 @@
     <div>
         <div v-if="text2.includes('pizza')">
             <p>text에 'pizza'를 포함</p>
-            <img src="../assets/img_pizza.svg" alt="img_pizza">
+            <img src="./assets/img_pizza.svg" alt="img_pizza">
         </div>
         <div v-else>
             <p>'pizza'를 찾지 못함</p>

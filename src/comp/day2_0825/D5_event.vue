@@ -1,7 +1,7 @@
 <template>
     <!-- event -->
     <div class="moose">
-        <img src="../assets/img_moose.jpg" alt="">
+        <img src="./assets/img_moose.jpg" alt="img_moose">
         <p>Moose count: {{ count }}</p>
         <button type="button" @click="count++">Count moose</button>
 
@@ -52,16 +52,15 @@
 <script setup>
 import { ref } from 'vue';
 
-import pic_bulbon from '../assets/pic_bulbon.gif'
-import pic_bulboff from '../assets/pic_bulboff.gif'
-
-import img_burrito from '../assets/img_burrito.svg'
-import img_salad from '../assets/img_salad.svg'
-import img_cake from '../assets/img_cake.svg'
-import img_soup from '../assets/img_soup.svg'
-import img_fish from '../assets/img_fish.svg'
-import img_pizza from '../assets/img_pizza.svg'
-import img_rice from '../assets/img_rice.svg'
+import pic_bulbon from './assets/pic_bulbon.gif'
+import pic_bulboff from './assets/pic_bulboff.gif'
+import img_burrito from './assets/img_burrito.svg'
+import img_salad from './assets/img_salad.svg'
+import img_cake from './assets/img_cake.svg'
+import img_soup from './assets/img_soup.svg'
+import img_fish from './assets/img_fish.svg'
+import img_pizza from './assets/img_pizza.svg'
+import img_rice from './assets/img_rice.svg'
 
 const cnt = ref(0)
 const lightOn = ref(false)
