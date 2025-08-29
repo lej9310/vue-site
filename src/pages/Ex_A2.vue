@@ -548,6 +548,7 @@ header {
 
 /* Footer =================================== */
 .site-footer {
+    margin-top: 20px;
     background-color: #222;
     color: #ccc;
     padding: 20px 40px;
