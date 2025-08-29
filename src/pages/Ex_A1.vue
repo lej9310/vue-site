@@ -184,6 +184,7 @@ function nextSlide() {
     currentIndex.value = (currentIndex.value + 1) % slides.length
 }
 
+// 갤러리 & 공지사항
 const images = import.meta.glob('../assets/gallery/*.jpg', { eager: true })
 
 const galleryTabs = ref([
@@ -219,14 +220,15 @@ function closePopup() {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #fff;
+    background-color: #ffffff;
+    color: #333333;
 }
 
 /* 헤더 ====================================================================== */
 header {
     width: 1200px;
     height: 100px;
-    background-color: #4f4f4f;
+    background-color: #333333;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
@@ -273,7 +275,7 @@ header {
 .main-menu-link {
     text-decoration: none;
     font-weight: bold;
-    color: #fff;
+    color: #ffffff;
     padding: 10px 5px;
     display: inline-block;
     transition: color 0.3s;
@@ -290,7 +292,7 @@ header {
     display: flex;
     flex-direction: column;
     padding: 10px 0;
-    background: white;
+    background: #ffffff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     min-width: 150px;
@@ -308,7 +310,7 @@ header {
 }
 
 .sub-menu li:hover {
-    background-color: #f0f0f0;
+    background-color: #ffffff;
 }
 
 /* 서브 메뉴 애니메이션 (fade + slide down) */
@@ -346,7 +348,7 @@ header {
     margin: 0 auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    background: #000;
+    background: #333333;
     user-select: none;
     z-index: 1;
 }
@@ -401,7 +403,7 @@ header {
     border: none;
     padding: 10px 18px;
     font-size: 32px;
-    color: #333;
+    color: #333333;
     cursor: pointer;
     border-radius: 50%;
     user-select: none;
@@ -463,7 +465,7 @@ header {
 
 .notice-content li {
     margin-bottom: 6px;
-    color: #333;
+    color: #333333;
 }
 
 .notice-content li:hover {
@@ -502,7 +504,7 @@ header {
     border: none;
     background: none;
     cursor: pointer;
-    color: #333;
+    color: #333333;
 }
 
 /* 갤러리 */
@@ -576,7 +578,6 @@ header {
 
 .shortcut ul li {
     width: 100%;
-
 }
 
 .shortcut ul li a {

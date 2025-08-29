@@ -5,6 +5,7 @@ import HomeView from './pages/HomeView.vue'
 import StudyView from './pages/StudyView.vue'
 import Ex_A1 from './pages/Ex_A1.vue'
 import Ex_B1 from './pages/Ex_B1.vue'
+import Ex_A2 from './pages/Ex_A2.vue'
 
 const routes = [
     { path: '/', component: HomeView },
@@ -17,6 +18,10 @@ const routes = [
             {
                 path: 'a1',
                 component: Ex_A1,
+            },
+            {
+                path: 'a2',
+                component: Ex_A2,
             },
             {
                 path: 'b1',

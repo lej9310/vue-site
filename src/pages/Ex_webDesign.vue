@@ -1,7 +1,8 @@
 <template>
     <div>
         <button @click="gotoPages('a1')">A1 웹디자인기능사</button>
-        <button @click="gotoPages('b1')">B1 웹디자인기능사</button>
+        <button @click="gotoPages('a2')">A2 웹디자인기능사</button>
+        <button @click="gotoPages('b1')">B1 웹디자인기능사</button>        
       <router-view />
     </div>
 </template>
